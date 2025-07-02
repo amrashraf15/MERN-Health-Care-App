@@ -3,13 +3,11 @@ import { assets } from '../assets/assets_frontend/assets.js'
 import { useEffect, useState } from 'react'
 import RelatedDoctors from '../components/RelatedDoctors.jsx'
 import { useAuthStore } from '../store/useAuthStore.js'
-import { useAdminStore } from '../../../admin/src/store/useAdminStore.js'
 import toast from 'react-hot-toast'
 
 const Appointment = () => {
   const { docId } = useParams()
-  const { doctors, getAllDoctors } = useAdminStore();
-  const { bookAppointment } = useAuthStore();
+  const { doctors, getAllDoctors,bookAppointment  } = useAuthStore();
   const [docInfo, setDocinfo] = useState(null)
   const [docSlots, setDocSlots] = useState([])
   const [slotIndex, setSlotIndex] = useState(0)

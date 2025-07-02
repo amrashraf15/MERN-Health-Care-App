@@ -1,9 +1,10 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-import { useAdminStore } from '../../../admin/src/store/useAdminStore.js';
+import { useAuthStore } from '../store/useAuthStore.js';
+
 
 const Doctors = () => {
-  const { doctors, getAllDoctors } = useAdminStore();
+  const { doctors, getAllDoctors } = useAuthStore();
   const navigate = useNavigate()
   const { speciality } = useParams();
   const [filterDoc,setFilterDoc] = useState([]);
