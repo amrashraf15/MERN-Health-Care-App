@@ -1,5 +1,5 @@
 import express from "express"
-import { bookAppointment, checkAuth, cancelAppointment, getProfile, listAppointment, login, logout, signup, updateProfile } from "../controllers/auth-controllers.js";
+import { bookAppointment, checkAuth, cancelAppointment, getProfile, listAppointment, login, logout, signup, updateProfile, getAllDoctors } from "../controllers/auth-controllers.js";
 import { protectRoute } from "../middleware/auth-middleware.js";
 
 const router = express.Router();
@@ -13,5 +13,6 @@ router.put("/update-profile",protectRoute,updateProfile)
 router.get("/appointments",protectRoute,listAppointment)
 router.post("/book-appointment",protectRoute,bookAppointment)
 router.put("/cancel-appointment",protectRoute,cancelAppointment)
+router.get('/all-doctors',getAllDoctors);
 
 export default router;

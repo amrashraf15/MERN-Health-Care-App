@@ -171,6 +171,16 @@ export const bookAppointment = async (req,res) => {
         res.status(500).json({ success: false, message: error.message });
     }
 }
+export const getAllDoctors = async (req,res) => {
+    try {
+        const doctors = await Doctor.find().select("-password");
+        res.status(200).json({success:true,message:"All Doctors fetched successfully",doctors})
+        
+    } catch (error) {
+        console.log("error in  getAllDoctors controller :",error)
+        res.status(500).json({success:false,message:error.message})
+    }
+};
 
 export const listAppointment = async (req,res) => {
     const userId =req.user._id

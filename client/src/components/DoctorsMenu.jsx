@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import { useAdminStore } from '../../../admin/src/store/useAdminStore.js';
+
 import { useEffect } from 'react';
+import { useAuthStore } from '../store/useAuthStore.js';
 
 
 const DoctorsMenu = () => {
-    const { doctors, getAllDoctors } = useAdminStore();
+    const { doctors, getAllDoctors } = useAuthStore();
     useEffect(() => {
     getAllDoctors(); 
   }, [getAllDoctors]);

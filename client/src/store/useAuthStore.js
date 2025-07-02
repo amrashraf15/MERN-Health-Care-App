@@ -14,6 +14,7 @@ export const useAuthStore = create((set) => ({
     isSigningUp:false,
     isLoggingIn:false,
     isCheckingAuth:false,
+    doctors:[],
     isGettingProfile:false,
     isUpdatingProfile:false,
     bookedDoctor:null,
@@ -115,5 +116,16 @@ export const useAuthStore = create((set) => ({
         } catch (error) {
             toast.error(error.response.data.message || "Something went wrong");
         }
-    }
+    },
+    getAllDoctors:async () => {
+        set({isGettingDoctors:true})
+        try {
+            const res =await axios.get(`${API_URL}/all-doctors`)
+            set({doctors:res.data.doctors})
+        } catch (error) {
+            toast.error(error?.response?.data?.message || "Something went wrong");
+        }finally{
+            set({isGettingDoctors:false})
+        }
+    },
 }))
