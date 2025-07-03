@@ -196,7 +196,7 @@ This project was inspired by the work of amazing developers and content creators
 
 🎨 **UI/UX Design & Assets**: The design and assets used in this project are based on the Figma file shared by **GreatStack** on YouTube.
 
-🔗 **Figma Link**: [Doctor Appointment UI – GreatStack](https://www.figma.com/design/ZLkjwG5ehxNRrC4SUA2WG)
+🔗 **Figma Link**: [Doctor Appointment UI – GreatStack]([https://www.figma.com/design/ZLkjwG5ehxNRrC4SUA2WG](https://www.figma.com/design/ZLkjwG5ehxNRrC4SUA2WG7/Prescripto---UI-Design?node-id=0-1&p=f&t=mhNrDkAVBZclDBET-0))
 
 📺 **YouTube Channel**: [GreatStack](https://www.youtube.com/@GreatStack)
 
