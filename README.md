@@ -52,4 +52,22 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 
 ---
 
+## 🛠 Technologies
+
+- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
+- ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb)
+- ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose)
+- ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+- ![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?style=for-the-badge&logo=react-router)
+- ![Zustand](https://img.shields.io/badge/Zustand-252525?style=for-the-badge&logo=zod)
+- ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios)
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
+- ![DaisyUI](https://img.shields.io/badge/DaisyUI-F6D860?style=for-the-badge)
+- ![Lucide Icons](https://img.shields.io/badge/Lucide--React-000000?style=for-the-badge&logo=lucide)
+- ![CORS](https://img.shields.io/badge/CORS-enabled-004d7a?style=for-the-badge)
+
+---
+
 
