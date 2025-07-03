@@ -1,11 +1,8 @@
 # 🏥 WiseCare – MERN Appointment Booking App
 A comprehensive full-stack appointment booking system built with MongoDB, Express, React, and Node.js. DocuCare enables patients to book appointments, doctors to manage schedules and earnings, and admins to oversee the entire platform.
 
-<p align="center">
-  <img src="frontend/public/home.png" alt="Home" width="30%" height="30%" />
-  <img src="frontend/public/patient-login.png" alt="Patient Login" width="30%" height="30%" />
-  <img src="frontend/public/doctor-dashboard.png" alt="Doctor Dashboard" width="30%" height="30%" />
-</p>
+# DEMO
+
 
 
 ---
