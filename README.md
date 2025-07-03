@@ -70,4 +70,57 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 
 ---
 
+## 📘 API Endpoints
+
+### 🧑‍⚕️ Admin Routes
+
+| Method | Endpoint                 | Protected | Description                              |
+|--------|--------------------------|-----------|------------------------------------------|
+| POST   | `/api/admin/login`       | ❌        | Login admin                              |
+| POST   | `/api/admin/logout`      | ❌        | Logout admin                             |
+| GET    | `/api/admin/check-admin` | ✅        | Verify admin session                     |
+| POST   | `/api/admin/add-doctor`  | ✅        | Add a new doctor                         |
+| GET    | `/api/admin/all-doctors` | ❌        | Get all registered doctors               |
+| PUT    | `/api/admin/change-availability` | ✅ | Change doctor availability              |
+| GET    | `/api/admin/all-appointments` | ✅   | Fetch all appointments                   |
+| DELETE | `/api/admin/delete-appointment` | ✅ | Delete an appointment                    |
+| GET    | `/api/admin/dashboard`   | ✅        | Get admin dashboard data                 |
+
+---
+
+### 👨‍⚕️ Doctor Routes
+
+| Method | Endpoint                           | Protected | Description                           |
+|--------|------------------------------------|-----------|---------------------------------------|
+| POST   | `/api/doctor/login`                | ❌        | Login doctor                          |
+| POST   | `/api/doctor/logout`               | ❌        | Logout doctor                         |
+| GET    | `/api/doctor/check-auth`           | ✅        | Verify doctor session                 |
+| GET    | `/api/doctor/doctor-appointments`  | ✅        | Get doctor's upcoming appointments    |
+| PUT    | `/api/doctor/complete-appointment` | ✅        | Mark an appointment as completed      |
+| GET    | `/api/doctor/doctor-info`          | ✅        | Get doctor profile data               |
+| PUT    | `/api/doctor/update-doctor-info`   | ✅        | Update doctor profile info            |
+| GET    | `/api/doctor/doctordashboard`      | ✅        | Get doctor dashboard stats            |
+
+---
+
+### 👤 Patient (Auth) Routes
+
+| Method | Endpoint                          | Protected | Description                           |
+|--------|-----------------------------------|-----------|---------------------------------------|
+| POST   | `/api/auth/signup`                | ❌        | Register a new patient                |
+| POST   | `/api/auth/login`                 | ❌        | Login patient                         |
+| POST   | `/api/auth/logout`                | ❌        | Logout patient                        |
+| GET    | `/api/auth/check-auth`            | ✅        | Verify patient session                |
+| GET    | `/api/auth/get-profile`           | ✅        | Fetch patient profile                 |
+| PUT    | `/api/auth/update-profile`        | ✅        | Update patient profile                |
+| GET    | `/api/auth/appointments`          | ✅        | Get patient’s appointments            |
+| POST   | `/api/auth/book-appointment`      | ✅        | Book a new appointment                |
+| PUT    | `/api/auth/cancel-appointment`    | ✅        | Cancel an existing appointment        |
+| GET    | `/api/auth/all-doctors`           | ❌        | Fetch list of available doctors       |
+
+---
+
+> 🔐 **Protected** routes require valid JWT tokens for authentication (Admin, Doctor, or Patient based).
+
+
 
