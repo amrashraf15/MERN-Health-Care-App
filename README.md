@@ -18,7 +18,6 @@ A comprehensive full-stack appointment booking system built with MongoDB, Expres
 - [Technologies](#-technologies)
 - [API Endpoints](#-api-endpoints)
 - [Project Structure](#-project-structure)   
-- [Installation](#-installation)
 - [Contact](#-contact)  
 - [Credits](#-credits)
 
@@ -181,7 +180,15 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 
 ```
 
+---
+ ## 📬 Contact
+
+- **Name**: Amr Ashraf  
+- **Email**: [amrashraf1592@gmail.com](mailto:amrashraf1592@gmail.com)  
+- **GitHub**: [amrashraf15](https://github.com/amrashraf15)  
+- **Project Link**: [MERN-Health-Care-App]([https://github.com/amrashraf15/MERN-AUTH](https://github.com/amrashraf15/MERN-Health-Care-App))
 
 ---
+
 
 
