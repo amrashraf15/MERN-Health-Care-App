@@ -190,5 +190,18 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 
 ---
 
+## 🙏 Credits
+
+This project was inspired by the work of amazing developers and content creators who share valuable resources for free.
+
+🎨 **UI/UX Design & Assets**: The design and assets used in this project are based on the Figma file shared by **GreatStack** on YouTube.
+
+🔗 **Figma Link**: [Doctor Appointment UI – GreatStack](https://www.figma.com/design/ZLkjwG5ehxNRrC4SUA2WG)
+
+📺 **YouTube Channel**: [GreatStack](https://www.youtube.com/@GreatStack)
+
+A big thanks to GreatStack for providing beautiful design assets and inspiration that shaped this project’s frontend experience.
+
+---
 
 
