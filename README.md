@@ -2,7 +2,7 @@
 A comprehensive full-stack appointment booking system built with MongoDB, Express, React, and Node.js. DocuCare enables patients to book appointments, doctors to manage schedules and earnings, and admins to oversee the entire platform.
 
 ## DEMO
-[🎬 Watch the demo](https://github.com/amrashraf15/MERN-Health-Care-App/blob/main/demo%20(1)%20(1)%20(1).mp4?raw=true)
+https://github.com/user-attachments/assets/9f8e2638-c85d-4352-a388-b05456f4f296
 
 
 
