@@ -124,4 +124,62 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 
 ---
 
+# 📁 MERN-HCA Project Structure
+
+## ── MERN-HCA/
+├── admin/
+│   ├── dist/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── constants/
+│   │   ├── pages/
+│   │   ├── store/
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── README.md
+│   ├── tailwind.config.js
+│   └── vite.config.js
+
+├── backend/
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── lib/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── server.js
+│   ├── uploads/
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+
+├── client/
+│   ├── dist/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── constants/
+│   │   ├── pages/
+│   │   ├── store/
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   └── .gitignore
+
+
+---
+
 
