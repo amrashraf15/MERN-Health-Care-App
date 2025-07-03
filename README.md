@@ -6,7 +6,11 @@ A comprehensive full-stack appointment booking system built with MongoDB, Expres
   <img src="frontend/public/patient-login.png" alt="Patient Login" width="30%" height="30%" />
   <img src="frontend/public/doctor-dashboard.png" alt="Doctor Dashboard" width="30%" height="30%" />
 </p>
+
+
 ---
+
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)  
