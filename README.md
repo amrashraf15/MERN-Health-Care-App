@@ -122,5 +122,6 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 
 > 🔐 **Protected** routes require valid JWT tokens for authentication (Admin, Doctor, or Patient based).
 
+---
 
 
