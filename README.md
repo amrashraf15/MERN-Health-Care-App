@@ -26,7 +26,7 @@ A comprehensive full-stack appointment booking system built with MongoDB, Expres
 
 ## 📖 Overview
 
-DocuCare is a full-stack web application designed for managing doctor appointments. It includes role-based authentication for patients, doctors, and administrators. Patients can book and manage appointments, doctors can review schedules and earnings, and admins can control doctor profiles and appointments.
+WiseCare is a full-stack web application designed for managing doctor appointments. It includes role-based authentication for patients, doctors, and administrators. Patients can book and manage appointments, doctors can review schedules and earnings, and admins can control doctor profiles and appointments.
 
 - **Express.js** backend with MongoDB via Mongoose  
 - **React** frontend with Zustand for state management  
