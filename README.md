@@ -124,9 +124,9 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 
 ---
 
-# 📁 MERN-HCA Project Structure
+## 🧭 Project Structure
 
-## ── MERN-HCA/
+```C++
 ├── admin/
 │   ├── dist/
 │   ├── node_modules/
@@ -178,6 +178,8 @@ WiseCare is a full-stack web application designed for managing doctor appointmen
 │   │   ├── index.css
 │   │   ├── main.jsx
 │   └── .gitignore
+
+```
 
 
 ---
