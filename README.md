@@ -28,6 +28,7 @@ A comprehensive full-stack appointment booking system built with MongoDB, Expres
 
 WiseCare is a full-stack web application designed for managing doctor appointments. It includes role-based authentication for patients, doctors, and administrators. Patients can book and manage appointments, doctors can review schedules and earnings, and admins can control doctor profiles and appointments.
 
-- **Express.js** backend with MongoDB via Mongoose  
-- **React** frontend with Zustand for state management  
-- **Secure authentication** for all roles with JWT  
+- **Express.js** backend with MongoDB via Mongoose
+- 🎃 Authentication && Authorization with JWT
+- 👌 Global state management with Zustand
+- 🐞 Error handling both on the server and on the client
