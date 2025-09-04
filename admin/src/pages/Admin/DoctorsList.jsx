@@ -54,7 +54,7 @@ const DoctorsList = () => {
 
                 <button
                   onClick={() => changeDoctorAvailability(doctor._id)}
-                  className="mt-2 text-sm text-base-content border px-1.5 rounded-full py-0.5 hover:text-secondary-content"
+                  className="mt-2 text-sm text-base-content border px-1.5 rounded-full py-0.5 hover:text-primary-content"
                 >
                   Toggle Availability
                 </button>

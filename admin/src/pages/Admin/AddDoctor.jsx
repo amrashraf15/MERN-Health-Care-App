@@ -1,28 +1,35 @@
-import React, { useState } from 'react';
-import { useAdminStore } from '../../store/useAdminStore.js';
+import React, { useState, useEffect } from "react";
+import { useAdminStore } from "../../store/useAdminStore.js";
 import { Camera } from "lucide-react";
+import { motion as Motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AddDoctor = () => {
   const [selectedImg, setSelectedImg] = useState(null);
   const { isAddingDoctor, addDoctor } = useAdminStore();
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    phone: '',
-    speciality: 'General physician',
-    degree: '',
-    experience: '',
+    name: "",
+    email: "",
+    password: "",
+    phone: "",
+    speciality: "General physician",
+    degree: "",
+    experience: "",
     address: {
-      address1: '',
-      address2: '',
+      address1: "",
+      address2: "",
     },
-    fees: '',
-    about: '',
-    image: '',
+    fees: "",
+    about: "",
+    image: "",
     available: true,
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
+  }, []);
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
@@ -45,7 +52,7 @@ const AddDoctor = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === 'address1' || name === 'address2') {
+    if (name === "address1" || name === "address2") {
       setFormData((prev) => ({
         ...prev,
         address: {
@@ -53,10 +60,10 @@ const AddDoctor = () => {
           [name]: value,
         },
       }));
-    } else if (name === 'available') {
+    } else if (name === "available") {
       setFormData((prev) => ({
         ...prev,
-        available: value === 'true',
+        available: value === "true",
       }));
     } else {
       setFormData((prev) => ({
@@ -72,12 +79,31 @@ const AddDoctor = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="min-h-screen w-full md:px-10 py-10">
-      <h2 className="text-xl font-semibold mb-6">Add Doctor</h2>
+    <Motion.form
+      onSubmit={handleSubmit}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      className="min-h-screen w-full md:px-10 py-10"
+    >
+      <h2
+        className="text-xl md:text-2xl font-bold mb-8 border-l-4 border-primary pl-3"
+        data-aos="fade-right"
+      >
+        Add Doctor
+      </h2>
 
-      <div className="bg-white p-8 rounded-md border w-full">
+      <div
+        className="bg-base-100 p-8 rounded-xl shadow-lg border"
+        data-aos="zoom-in"
+      >
         {/* Image Upload */}
-        <div className="flex flex-col items-center gap-4 mb-6">
+        <Motion.div
+          className="flex flex-col items-center gap-4 mb-8"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="relative">
             <img
               src={selectedImg || "/avatar.png"}
@@ -86,11 +112,11 @@ const AddDoctor = () => {
             />
             <label
               htmlFor="avatar-upload"
-              className={`absolute bottom-0 right-0 bg-base-content hover:scale-105 p-2 rounded-full cursor-pointer transition-all duration-200 ${
+              className={`absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full cursor-pointer shadow-lg hover:scale-110 transition ${
                 isAddingDoctor ? "animate-pulse pointer-events-none" : ""
               }`}
             >
-              <Camera className="w-5 h-5 text-base-200" />
+              <Camera className="w-5 h-5" />
             </label>
             <input
               id="avatar-upload"
@@ -103,11 +129,12 @@ const AddDoctor = () => {
           <p className="text-sm text-gray-500">
             {isAddingDoctor ? "Uploading..." : "Upload doctor picture"}
           </p>
-        </div>
+        </Motion.div>
 
         {/* Form Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
+          {/* Name */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Doctor name</label>
             <input
               name="name"
@@ -117,9 +144,10 @@ const AddDoctor = () => {
               placeholder="Name"
               className="input input-bordered w-full"
             />
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Speciality */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Speciality</label>
             <select
               name="speciality"
@@ -134,9 +162,10 @@ const AddDoctor = () => {
               <option>Neurologist</option>
               <option>Gastroenterologist</option>
             </select>
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Email */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Doctor Email</label>
             <input
               name="email"
@@ -147,9 +176,10 @@ const AddDoctor = () => {
               placeholder="Your email"
               className="input input-bordered w-full"
             />
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Phone */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Phone Number</label>
             <input
               name="phone"
@@ -159,9 +189,10 @@ const AddDoctor = () => {
               placeholder="Phone number"
               className="input input-bordered w-full"
             />
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Degree */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Degree</label>
             <input
               name="degree"
@@ -172,9 +203,10 @@ const AddDoctor = () => {
               placeholder="Degree"
               className="input input-bordered w-full"
             />
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Password */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Doctor Password</label>
             <input
               name="password"
@@ -185,9 +217,10 @@ const AddDoctor = () => {
               placeholder="Password"
               className="input input-bordered w-full"
             />
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Address */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Address</label>
             <input
               name="address1"
@@ -205,9 +238,10 @@ const AddDoctor = () => {
               placeholder="Address 2"
               className="input input-bordered w-full"
             />
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Experience */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Experience</label>
             <select
               name="experience"
@@ -222,9 +256,10 @@ const AddDoctor = () => {
               <option>5-10 years</option>
               <option>10+ years</option>
             </select>
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Fees */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Fees</label>
             <input
               name="fees"
@@ -235,9 +270,10 @@ const AddDoctor = () => {
               placeholder="Your fees"
               className="input input-bordered w-full"
             />
-          </div>
+          </Motion.div>
 
-          <div>
+          {/* Available */}
+          <Motion.div data-aos="fade-up">
             <label className="block text-sm mb-1">Available</label>
             <select
               name="available"
@@ -248,11 +284,11 @@ const AddDoctor = () => {
               <option value="true">Available</option>
               <option value="false">Not Available</option>
             </select>
-          </div>
+          </Motion.div>
         </div>
 
         {/* About me */}
-        <div className="mt-6">
+        <Motion.div data-aos="fade-up" className="mt-6">
           <label className="block text-sm mb-1">About me</label>
           <textarea
             name="about"
@@ -263,16 +299,25 @@ const AddDoctor = () => {
             placeholder="Write about yourself"
             rows={4}
           />
-        </div>
+        </Motion.div>
 
         {/* Submit */}
-        <div className="mt-6">
-          <button type="submit" className="btn btn-primary">
-            Add doctor
+        <Motion.div
+          className="mt-8 flex justify-end"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <button
+            type="submit"
+            className="btn btn-primary px-6"
+            disabled={isAddingDoctor}
+          >
+            {isAddingDoctor ? "Adding..." : "Add Doctor"}
           </button>
-        </div>
+        </Motion.div>
       </div>
-    </form>
+    </Motion.form>
   );
 };
 
